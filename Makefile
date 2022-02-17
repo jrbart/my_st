@@ -3,6 +3,8 @@
 .POSIX:
 
 include config.mk
+STLDFLAGS = -L$(X11LIB) -lm -lX11 -lutil -lXft \
+        -lfontconfig
 
 SRC = st.c x.c
 OBJ = $(SRC:.c=.o)
